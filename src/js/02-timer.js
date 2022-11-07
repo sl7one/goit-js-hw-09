@@ -60,7 +60,7 @@ function updateTimer() {
   refs.minutes.textContent = addLeadingZero(minutes);
   refs.seconds.textContent = addLeadingZero(seconds);
 
-  console.log(difference, timerId);
+  // console.log(difference, timerId);
   if (difference < 0) {
     clearInterval(timerId);
   }
