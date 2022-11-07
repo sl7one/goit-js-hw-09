@@ -7,6 +7,7 @@ let idTimer = null;
 
 refs.start.addEventListener('click', onBtnStart);
 refs.stop.addEventListener('click', onBtnStop);
+refs.stop.style.marginLeft = '15px';
 
 function onBtnStart() {
   changeBgColor();

@@ -54,13 +54,16 @@ function onClick() {
 function updateTimer() {
   const { days, hours, minutes, seconds } = convertMs(difference);
   difference -= 1000;
-  if (difference === 0) {
-    clearInterval(timerId);
-  }
+
   refs.day.textContent = addLeadingZero(days);
   refs.hour.textContent = addLeadingZero(hours);
   refs.minutes.textContent = addLeadingZero(minutes);
   refs.seconds.textContent = addLeadingZero(seconds);
+
+  console.log(difference, timerId);
+  if (difference < 0) {
+    clearInterval(timerId);
+  }
 }
 
 flatpickr(refs.input, options);
